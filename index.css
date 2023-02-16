@@ -1,0 +1,236 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    background: whitesmoke;
+    color: #333333;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    /* height: 100vh; */
+    width: 100vw;
+    margin: 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2, 
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    font-size: 1rem; /* 16px */
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: 600;
+}
+
+
+/* ===== UTILITY =========================*/
+.wire1 {
+    border: 1px solid seagreen;
+}
+
+.wire2 {
+    border: 1px solid tomato;
+}
+
+
+
+/* ===== CONTAINERS ========================= */ 
+.main-container {
+    background: white;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    height: 75vh;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container {
+    text-shadow: 1em 1em 1em rgba(0, 0, 0, .1);
+    letter-spacing: .1em;
+    font-size: clamp(16px, 3vw, 25px);
+    height: 100px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-conatiner {
+    padding: 1.5rem 1rem; /* 24px 16px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colors-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.hex-container {
+    height: 75px; 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+
+}
+
+
+
+/* ===== HEADER ELs ========================= */
+.get-color-form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "color mode mode mode"
+        "btn btn btn btn"
+    ;
+    gap: 12px; 
+    justify-items: center;
+    align-items: center;
+}
+  
+  input[type="color"] {
+    grid-area: color;
+    appearance: none;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    height: 55px;
+    width: 100%;
+    min-width: 70px;
+  }
+
+  select {
+    grid-area: mode;
+    height: 50px;
+    width: 100%;
+    background: none;
+    border: 1px solid #8b8b8b;
+    border-radius: 5px;
+    font: inherit;
+    font-size: .875rem; /* 14px */
+    padding-left: 5px;
+  }
+
+.get-color-btn {
+    grid-area: btn;
+    height: 50px;
+    width: 100%;
+    background: none;
+    border: 1px solid #8b8b8b;
+    border-radius: 5px;
+    font-size: .875rem; /* 14px */
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.get-color-btn:hover {
+    background-color: #333333;
+    color: #fff;
+    box-shadow: none;
+}
+
+
+
+/* ===== COLORS CONTAINER ELs =========================*/
+.color-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.color1,
+.color2,
+.color3,
+.color4,
+.color5 {
+    height: 100%;
+    width: 100%;
+}
+
+.color1 {
+    background-color: #f2f2f2;
+}
+
+.color2 {
+    background-color: #d9d9d9;
+}
+
+.color3 {
+    background-color: #8c8c8c;
+}
+
+.color4 {
+    background-color: #595959;
+}
+
+.color5 {
+    background-color: #262626;
+}
+
+
+/* ===== FOOTER CONTAINER ELs ========================= */
+.hex-code {
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.hex-code:hover {
+    text-decoration: underline;
+}
+
+/* ===== ALERT ========================= */
+.copied-alert {
+    position: fixed;
+    top: 0;
+    background-color: #e05757;
+    color: #fff;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 40px;
+    display: none;
+}
+
+
+/* ===== MEDIA QUERY ========================= */
+@media screen and (min-width: 600px){
+
+    .get-color-form {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+            "color mode mode mode mode btn"
+        ;
+        gap: 12px; 
+        justify-items: center;
+        align-items: center;
+    }
+
+    .title-container {
+        margin-top: 55px;
+        margin-bottom: 15px;
+    }
+
+}
