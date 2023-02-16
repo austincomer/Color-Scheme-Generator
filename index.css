@@ -108,6 +108,8 @@ h4 {
 }
   
   input[type="color"] {
+    -webkit-appearance: none;
+    border-radius: 0;
     grid-area: color;
     appearance: none;
     background-color: #fff;
